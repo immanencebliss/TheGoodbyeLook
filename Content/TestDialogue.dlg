@@ -1,0 +1,30 @@
+DlgVersion 7
+DlgName "TestDialogue"
+DlgGuid {  A 1780559341 B 1296140119 C -827444063 D -1305555591 }
+Node_Speech StartNode
+{
+	Text ""
+	SpeakerState "None"
+	bIsVirtualParent False
+	OwnerName "None"
+	bCheckChildrenOnEvaluation False
+	VoiceSoundWave ""
+	VoiceDialogueWave ""
+	Children { {  TargetIndex 0 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+}
+DlgParticipantClasses { {  ParticipantName "Cagney" ParticipantClass "" } }
+Node Nodes
+{
+	// 0
+	Node_Speech 
+	{
+		Text "Yo wattup Cagney here just drinking mountiain dew and smoking mad weed with my brosphs"
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		EnterEvents { {  ParticipantName "None" EventType "EDlgEventType::DlgEventEvent" EventName "None" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
+	}
+}
