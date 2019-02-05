@@ -1,6 +1,8 @@
 // Copyright 2017-2018 Csaba Molnar, Daniel Butum
 #include "DlgManager.h"
 
+
+
 #include "UObject/UObjectIterator.h"
 #include "Engine/ObjectLibrary.h"
 #include "Interfaces/IPluginManager.h"
@@ -324,6 +326,8 @@ bool UDlgManager::ConstructParticipantMap(const UDlgDialogue* Dialogue, const TA
 		UE_LOG(LogDlgSystem,
 			   Error,
 			   TEXT("Failed to start dialogue - Invalid dialogue! (Either nullptr or a dialogue without any participants)"));
+
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("didn't work"));
 		return false;
 	}
 
@@ -336,6 +340,8 @@ bool UDlgManager::ConstructParticipantMap(const UDlgDialogue* Dialogue, const TA
 			   TEXT("Failed to start dialogue - the amount of participants does not match the dialogue's "
 					"expectation! Dialogue Participants Num %d != Participants Num %d"),
 			   DialogueParticipants.Num(), Participants.Num());
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("didn't work"));
+		
 		return false;
 	}
 
@@ -346,6 +352,7 @@ bool UDlgManager::ConstructParticipantMap(const UDlgDialogue* Dialogue, const TA
 		if (!IsValid(Participant))
 		{
 			UE_LOG(LogDlgSystem, Error, TEXT("Failed to start dialogue - Participant at index %d is null"), ParticipantIndex);
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("didn't work"));
 			return false;
 		}
 
@@ -357,6 +364,7 @@ bool UDlgManager::ConstructParticipantMap(const UDlgDialogue* Dialogue, const TA
 				   TEXT("Failed to start dialogue - Participant object at index = %d with ObjectName = `%s`"
 						"does not implement the IDlgDialogueParticipant interface!"),
 				   ParticipantIndex, *Participant->GetName());
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("didn't work"));
 			return false;
 		}
 
@@ -369,6 +377,7 @@ bool UDlgManager::ConstructParticipantMap(const UDlgDialogue* Dialogue, const TA
 				   TEXT("Failed to start dialogue - Input Participant at index = %d "
 						"does not have a participant with name = `%s` in the Dialogue"),
 				   ParticipantIndex, *ParticipantName.ToString());
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("didn't work"));
 			return false;
 		}
 		OutMap.Add(ParticipantName, Participant);
