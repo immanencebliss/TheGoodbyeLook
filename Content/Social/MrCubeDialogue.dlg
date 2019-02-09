@@ -67,7 +67,8 @@ Node Nodes
 	// 3
 	Node_Speech 
 	{
-		Text "Well i was waiting for you"
+		Text "Well i was waiting for you|
+"
 		SpeakerState "None"
 		bIsVirtualParent False
 		OwnerName "Cagney"
