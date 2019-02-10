@@ -18,8 +18,8 @@ Node_Speech StartNode
 }
 DlgParticipantClasses
 {
-	{  ParticipantName "MrCube" ParticipantClass "" }
-	{  ParticipantName "Cagney" ParticipantClass "" }
+	{  ParticipantName "MrCube" ParticipantClass "/Game/Blueprints/NPC/BP_Jim.BP_Jim_C" }
+	{  ParticipantName "Cagney" ParticipantClass "/Game/FirstPersonBP/Blueprints/BP_Cagney.BP_Cagney_C" }
 }
 Node Nodes
 {
@@ -67,7 +67,8 @@ Node Nodes
 	// 3
 	Node_Speech 
 	{
-		Text "Well i was waiting for you"
+		Text "Well i was waiting for you|
+"
 		SpeakerState "None"
 		bIsVirtualParent False
 		OwnerName "Cagney"
