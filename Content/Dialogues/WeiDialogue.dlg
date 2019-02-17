@@ -1,0 +1,356 @@
+DlgVersion 7
+DlgName "WeiDialogue"
+DlgGuid {  A 258812603 B 1210191587 C -1912212299 D -887547042 }
+Node_Speech StartNode
+{
+	Text ""
+	SpeakerState "None"
+	bIsVirtualParent False
+	OwnerName "None"
+	bCheckChildrenOnEvaluation False
+	VoiceSoundWave ""
+	VoiceDialogueWave ""
+	Children { {  TargetIndex 0 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+}
+DlgParticipantClasses
+{
+	{  ParticipantName "Dr. Wei" ParticipantClass "" }
+	{  ParticipantName "Cagney" ParticipantClass "" }
+	{  ParticipantName "Wei" ParticipantClass "" }
+}
+Node Nodes
+{
+	// 0
+	Node_Selector 
+	{
+		SelectorType "EDlgNodeSelectorType::DlgNodeSelectorFirst"
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation True
+		Children
+		{
+			{  TargetIndex 1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 2 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 1
+	Node_SpeechSequence 
+	{
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Wei" Text "Hey, the man himself!" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "Wei." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Wei" Text "Welcome back to the land of the living, Cagney. How you feeling?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 1 FloatValue 0.0 NameValue "None" bBoolValue False bLongTermMemory True } }
+		Children
+		{
+			{  TargetIndex 3 Text "Tell him you just can't go on like this." SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 4 Text "Tell him you can feel your body slowing toward entropy by the day." SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 5 Text "Tell him you dreamed that you were dead." SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 2
+	Node_Speech 
+	{
+		Text "Whaddya hear, whaddya say?"
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 1 FloatValue 0.0 NameValue "None" bBoolValue True bLongTermMemory True } }
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 3
+	Node_Speech 
+	{
+		Text ""
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 7 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 4
+	Node_Speech 
+	{
+		Text ""
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 7 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 5
+	Node_Speech 
+	{
+		Text ""
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 7 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 6
+	Node_Speech 
+	{
+		Text ""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children
+		{
+			{  TargetIndex 8 Text "Ask him about the tenant" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 9 Text "Complain about the lack of work" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 10 Text "Complain about the food
+" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 7
+	Node_SpeechSequence 
+	{
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text "Good as I'm gonna get." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Good enough for me." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "So what's the word, Wei?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "All's quiet, skipper. Our new tenant arrived a couple hours ago. She's in the bunks getting settled." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "I was thinking I might whip up a stew in a little bit. Those skiff steaks are on their last legs. " SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 11 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 8
+	Node_SpeechSequence 
+	{
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text "Who's this tenant again?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Lady bounty hunter. Goes by Bathory. She's a bad bitch, skip. Stone gangster. I don't think she likes me." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "You know, Wei, common practice is bringing home girls who *do* like you." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Oh, he's got jokes! Well here's one for you, skip, but it isn't "ha ha" funny. We need the money and she paid three months in cash up front." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "Three months?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "That's right. She's setting up camp in the obs deck." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "Maybe we should charge her extra for the view." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 12 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 9
+	Node_SpeechSequence 
+	{
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text "It must be three weeks since we had a job." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "At least. A month, maybe more." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "We've seen worse dry spells." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Don't remind me. Look, I know I say it every time, but I've got connections, too..." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "I only take gigs from people I know. It's safer. No surprises." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Yeah, well, then you're playing it real fucking safe, man. You only take gigs from one dude." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Who is the Man With the Plan anyway? You ever met him? Does he even exist?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "We never see him, he never calls. The jobs just appear in the cyberdex. I mean, for all we know, he's just a spambot for some corporate bounty database." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text "I don't hear you complaining when the cash is flowing." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Well it ain't flowing now, skipper. All I'm saying is I've been riding with you going on eight years now. You know me, right? So let me find us some fucking action." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children
+		{
+			{  TargetIndex 13 Text "Tell him he's wrong" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 14 Text "Tell him he's right" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 15 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 16 Text "Tell him you'll think about it" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 10
+	Node_SpeechSequence 
+	{
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text "Skiff steak stew. My favorite." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "Soy compound and essence of meat. The breakfast of champions." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "But it's all we got, so it's either that or go hungry. Unless you want to dip into the cat food." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 17 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 11
+	Node_Speech 
+	{
+		Text "And still no jobs on the wire."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 12
+	Node_Speech 
+	{
+		Text "I'll let you run that by her."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 13
+	Node_SpeechSequence 
+	{
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence { {  Speaker "Cagney" Text "No can do, Doc. Sorry." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" } }
+		InnerEdges { {  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+		Children { {  TargetIndex 18 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 14
+	Node_SpeechSequence 
+	{
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text "Fine, you win. Call your connects, see what they can scare up." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Dr. Wei" Text "All right, now we're talking! Thanks, Cagney. You won't regret this." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 19 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 15
+	Node_Speech 
+	{
+		Text ""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+	}
+	// 16
+	Node_Speech 
+	{
+		Text "I'll think about it, Doc."
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 20 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 17
+	Node_Speech 
+	{
+		Text "Eh, it's tempting."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 18
+	Node_Speech 
+	{
+		Text "Trust is a wonderful thing."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 19
+	Node_Speech 
+	{
+		Text "I kind of already do."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 20
+	Node_Speech 
+	{
+		Text "That's all I can ask."
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "Dr. Wei"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+}
