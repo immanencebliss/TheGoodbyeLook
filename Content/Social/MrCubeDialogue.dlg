@@ -18,7 +18,7 @@ Node_Speech StartNode
 }
 DlgParticipantClasses
 {
-	{  ParticipantName "MrCube" ParticipantClass "/Game/Social/MrCube.MrCube_C" }
+	{  ParticipantName "MrCube" ParticipantClass "/Game/Blueprints/NPC/BP_Jim.BP_Jim_C" }
 	{  ParticipantName "Cagney" ParticipantClass "/Game/FirstPersonBP/Blueprints/BP_Cagney.BP_Cagney_C" }
 }
 Node Nodes
@@ -67,10 +67,11 @@ Node Nodes
 	// 3
 	Node_Speech 
 	{
-		Text "Well i was waiting for you"
+		Text "Well i was waiting for you|
+"
 		SpeakerState "None"
 		bIsVirtualParent False
-		OwnerName "cagney"
+		OwnerName "Cagney"
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
@@ -95,7 +96,7 @@ Node Nodes
 				Text "Next"
 				SpeakerState "None"
 				bIncludeInAllOptionListIfUnsatisfied True
-				Conditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionBoolCall" ParticipantName "cagney" CallbackName "AlreadyToldOf Longing" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue False bLongTermMemory True } }
+				Conditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionBoolCall" ParticipantName "Cagney" CallbackName "AlreadyToldOf Longing" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue False bLongTermMemory True } }
 			}
 			{  TargetIndex 7 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
 		}
@@ -110,7 +111,7 @@ Node Nodes
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
-		EnterEvents { {  ParticipantName "cagney" EventType "EDlgEventType::DlgEventModifyBool" EventName "AlreadyToldOf Longing" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue True } }
+		EnterEvents { {  ParticipantName "Cagney" EventType "EDlgEventType::DlgEventModifyBool" EventName "AlreadyToldOf Longing" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue True } }
 		Children
 		{
 			{  TargetIndex 8 Text "Wife Him
@@ -129,7 +130,7 @@ Node Nodes
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
-		Children { {  TargetIndex 11 Text "Finish" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+		Children { {  TargetIndex 11 Text "he don't love no hoes" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
 	}
 	// 8
 	Node_End 
