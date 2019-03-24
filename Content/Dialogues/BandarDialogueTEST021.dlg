@@ -1,6 +1,6 @@
 DlgVersion 7
-DlgName "BandarDialogue"
-DlgGuid {  A 1330891174 B 1306722822 C -1137132152 D -2013807659 }
+DlgName "BandarDialogueTEST021"
+DlgGuid {  A -95157808 B 1281645467 C 1362242214 D -441631978 }
 Node_Speech StartNode
 {
 	Text ""
@@ -27,7 +27,8 @@ Node Nodes
 	// 0
 	Node_Speech 
 	{
-		Text "So, what? You a cop?"
+		Text "ThisIsNewDialogue
+"
 		SpeakerState "None"
 		bIsVirtualParent False
 		OwnerName "Bandar"
@@ -58,7 +59,8 @@ Node Nodes
 	// 2
 	Node_Speech 
 	{
-		Text "Skiptracer, huh? I pulled a few years in the game myself. Wasn't for me."
+		Text "ThisisNewDialogue
+"
 		SpeakerState "None"
 		bIsVirtualParent False
 		OwnerName "Bandar"
@@ -233,7 +235,7 @@ Node Nodes
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
-		EnterEvents { {  ParticipantName "Bandar" EventType "EDlgEventType::DlgEventEvent" EventName "GoUpstairs" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
+		EnterEvents { {  ParticipantName "Bandar" EventType "EDlgEventType::DlgEventEvent" EventName "GoDownstairs" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
 	}
 	// 12
 	Node_Speech 
