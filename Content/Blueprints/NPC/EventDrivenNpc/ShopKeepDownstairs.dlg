@@ -19,61 +19,75 @@ Node_Speech StartNode
 DlgParticipantClasses
 {
 	{  ParticipantName "shopkeep" ParticipantClass "/Game/Blueprints/NPC/EventDrivenNpc/BP_Shopkeeper.BP_Shopkeeper_C" }
-	{  ParticipantName "cagney" ParticipantClass "" }
+	{  ParticipantName "Cagney" ParticipantClass "" }
 }
 Node Nodes
 {
 	// 0
-	Node_Speech 
+	Node_SpeechSequence 
 	{
-		Text "What do you want?
-"
-		SpeakerState "None"
-		bIsVirtualParent False
 		OwnerName "shopkeep"
 		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
+		SpeechSequence
+		{
+			{  Speaker "shopkeep" Text "The woman behind the counter has skin like leather. Cagney places her around 40, heavy smoker. The eyepatch on her face is worth a thousand words, none of them uplifting. 
+
+"Easy up there, old timer. I'll be damned if you don't look like a man who's fucked his life up flatter'n hammered shit."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Well don't you worry, gramps. Mama's Pawn 'n' Loan is here to give you your new lot in life."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""So what will you be hawking today? Your watch? Your ex-wife's jewelry?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
 		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue False bLongTermMemory True } }
 		Children
 		{
-			{  TargetIndex 2 Text "ShopKeeperBugPhase" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 3 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 4 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 2 Text "Cut to the chase" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 3 Text "Trade with Mama" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
 		}
 	}
 	// 1
 	Node_Speech 
 	{
-		Text "You again? What do you want?"
+		Text "Mama looks up at Cagney and frowns.
+
+"You again? What do you want?""
 		SpeakerState "None"
-		bIsVirtualParent False
+		bIsVirtualParent True
 		OwnerName "shopkeep"
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
 		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue True bLongTermMemory True } }
-		Children { {  TargetIndex 5 Text "show me the stuff!" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+		Children { {  TargetIndex 4 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
 	}
 	// 2
-	Node_Speech 
+	Node_SpeechSequence 
 	{
-		Text ""
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "cagney"
+		OwnerName "Cagney"
 		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		EnterEvents { {  ParticipantName "shopkeep" EventType "EDlgEventType::DlgEventEvent" EventName "BugPhase" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text ""I'm not hawking anything. I'm buying something. Specialty product."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Specialty, huh? What kind of specialty?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 5 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
 	}
 	// 3
 	Node_Speech 
 	{
-		Text ""
+		Text "Trade."
 		SpeakerState "None"
 		bIsVirtualParent False
-		OwnerName "cagney"
+		OwnerName "shopkeep"
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
@@ -88,8 +102,116 @@ Node Nodes
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
+		Children
+		{
+			{  TargetIndex 6 Text "Forget it" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 7 Text ""Hard times are coming, I reckon."
+" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
 	}
 	// 5
+	Node_Speech 
+	{
+		Text ""Tech. I'm looking for high level AR. The serious shit.""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 8 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 6
+	Node_Speech 
+	{
+		Text ""Have it your way, Mama. Catch you later.""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 9 Text "Finish" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 7
+	Node_SpeechSequence 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text ""Hard times are coming, I reckon."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text "Mama tenses, her lips tightening as suspicion washes over her features.
+
+"It'll get worse before it gets better."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children
+		{
+			{  TargetIndex 10 Text ""So runs the world away."" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 11 Text ""That's a bleak outlook."" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 12 Text ""Always look on the bright side, Mama."" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 8
+	Node_Speech 
+	{
+		Text "Mama's whole face darkens into a glare.
+
+"Ghostware? Sorry, pops, I think you got the wrong idea. This here's a simple pawn shop. I don't know nothin' about nothin', you feel me?""
+		SpeakerState "None"
+		bIsVirtualParent True
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 13 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 9
+	Node_End 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+	}
+	// 10
+	Node_Speech 
+	{
+		Text ""So runs the world away.""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+		Children { {  TargetIndex 14 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 11
+	Node_Speech 
+	{
+		Text ""That's a bleak outlook.""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+	}
+	// 12
+	Node_Speech 
+	{
+		Text ""Always look on the bright side, Mama.""
+		SpeakerState "None"
+		bIsVirtualParent False
+		OwnerName "Cagney"
+		bCheckChildrenOnEvaluation False
+		VoiceSoundWave ""
+		VoiceDialogueWave ""
+	}
+	// 13
 	Node_Speech 
 	{
 		Text ""
@@ -99,6 +221,87 @@ Node Nodes
 		bCheckChildrenOnEvaluation False
 		VoiceSoundWave ""
 		VoiceDialogueWave ""
-		EnterEvents { {  ParticipantName "shopkeep" EventType "EDlgEventType::DlgEventEvent" EventName "Upstairs" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
+		Children
+		{
+			{  TargetIndex 15 Text "Try flirting" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 16 Text "Try the courteous approach" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex 6 Text "Forget it" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+	}
+	// 14
+	Node_SpeechSequence 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "shopkeep" Text "Mama lets out a frustrated sigh.
+
+"Well, whistle through your teeth and spit, old man. Looks like you figured something out."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""You're not off the hook yet. I still don't like you."
+
+She turns to Bandar." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Open up, Bandar. Let the man in. But keep your eye on him."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 17 Text "Finish" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 15
+	Node_SpeechSequence 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "Cagney" Text ""That patch is a good look. Brings out the color of your other eye."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Oh yeah?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text ""How'd it happen?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Got in a fight."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text ""I'm guessing you lost."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""You guessed wrong. There are worse things a man can lose than an eye."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Cagney" Text ""What was it over?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "shopkeep" Text ""Bad pickup lines."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 13 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 16
+	Node_SpeechSequence 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		SpeechSequence
+		{
+			{  Speaker "shopkeep" Text ""Not looking to cause problems. What if I ask real nice?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "None" Text ""No dice, viejo. Hit the bricks, or Bandar over there's gonna hit you."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 13 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+	}
+	// 17
+	Node_End 
+	{
+		OwnerName "shopkeep"
+		bCheckChildrenOnEvaluation False
+		EnterEvents { {  ParticipantName "shopkeep" EventType "EDlgEventType::DlgEventEvent" EventName "GoUpstairs" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
 	}
 }
