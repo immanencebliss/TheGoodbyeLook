@@ -1,6 +1,6 @@
 DlgVersion 7
 DlgName "BandarDialogue"
-DlgGuid {  A 1330891174 B 1306722822 C -1137132152 D -2013807659 }
+DlgGuid {  A -1004473645 B 1272176414 C 70551734 D -949947159 }
 Node_Speech StartNode
 {
 	Text ""
