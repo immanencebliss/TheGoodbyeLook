@@ -10,12 +10,7 @@ Node_Speech StartNode
 	bCheckChildrenOnEvaluation False
 	VoiceSoundWave ""
 	VoiceDialogueWave ""
-	Children
-	{
-		{  TargetIndex 0 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		{  TargetIndex 1 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		{  TargetIndex 2 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-	}
+	Children { {  TargetIndex 0 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
 }
 DlgParticipantClasses
 {
@@ -25,283 +20,51 @@ DlgParticipantClasses
 Node Nodes
 {
 	// 0
-	Node_Speech 
+	Node_SpeechSequence 
 	{
-		Text "So, what? You a cop?"
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Bandar"
+		OwnerName "Cagney"
 		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue False bLongTermMemory True } }
-		Children
+		SpeechSequence
 		{
-			{  TargetIndex 3 Text "Maybe" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 4 Text "Yes" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 5 Text "No" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  Speaker "Bandar" Text "The shop is quiet for some time. Bandar and Mama exchange idle conversation as they tend to the pawn shop." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "After a few minutes, a patron enters the store. Her cagey tone makes Cagney's ears tingle. Something's going down." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""Hard times are coming, I reckon," says the stranger." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "Mama answers without skipping a beat.
+
+"It'll get worse before it gets better."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "The stranger completes the passphrase. "So runs the world away."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""Step this way, sister," Mama says. "Bandar'll show you upstairs. Watch your step."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "Whatever happens upstairs is beyond range of the bug's mic. Cagney listens to Mama bustle around behind the counter. A few minutes later, Bandar and the Stranger come back into the room." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""You find everything you needed?" Mama asks." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""And more," replies the stranger. "I'll be seeing you."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "Mama waits until the door has closed behind the stranger before speaking again. "Fucking Network creeps. She spend some dough at least?"" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""A bit," Bandar responds. "She was eyeing up the AR unit. She might be back with more cash."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text "Mama sighs. "There's something not right with that thing," she says. "Anyone from the Network comes in again, don't gve it up for less than 10 grand. I'm sick of this shit."" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
+			{  Speaker "Bandar" Text ""You got it, Mama," Bandar affirms, and the shop falls back into mundane routine. " SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
 		}
+		InnerEdges
+		{
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
+		}
+		Children { {  TargetIndex 1 Text "Finish" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
 	}
 	// 1
-	Node_Speech 
+	Node_End 
 	{
-		Text "You again. What now?"
-		SpeakerState "None"
-		bIsVirtualParent True
-		OwnerName "Bandar"
+		OwnerName "None"
 		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 0 FloatValue 0.0 NameValue "None" bBoolValue True bLongTermMemory True } }
-		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 2
-	Node_Speech 
-	{
-		Text "Skiptracer, huh? I pulled a few years in the game myself. Wasn't for me."
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		EnterConditions { {  Strength "EDlgConditionStrength::DlgConditionStrengthStrong" ConditionType "EDlgConditionType::DlgConditionNodeVisited" ParticipantName "None" CallbackName "None" Operation "EDlgOperation::DlgEqual" CompareType "EDlgCompareType::DlgCompareToConst" OtherParticipantName "None" OtherVariableName "None" IntValue 5 FloatValue 0.0 NameValue "None" bBoolValue True bLongTermMemory True } }
-		Children
-		{
-			{  TargetIndex 7 Text "You're weak" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 8 Text "I understand" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 9 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-	}
-	// 3
-	Node_SpeechSequence 
-	{
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "Something like that." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "PI maybe. Roper or skiptracer. Or just some shitheel on the grift." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Cagney" Text "Oh, the agony of choice." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children { {  TargetIndex 10 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 4
-	Node_SpeechSequence 
-	{
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "Yeah, that's right." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "And you got any ID that says so?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Cagney" Text "Nope. You're gonna have to take my word for it." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "You don't say." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children { {  TargetIndex 10 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 5
-	Node_SpeechSequence 
-	{
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "Not a chance. I'm a bounty hunter." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "..." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Cagney" Text "Easy up, kid. I'm not after you." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "Well, that's lucky for you." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children { {  TargetIndex 10 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 6
-	Node_Speech 
-	{
-		Text ""
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children
-		{
-			{  TargetIndex 11 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 12 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 13 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-	}
-	// 7
-	Node_SpeechSequence 
-	{
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "What's the matter? Couldn't hack it?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "Oh, I hack just fine. Got sick of playing junkyard dog for the corps and the cops." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children
-		{
-			{  TargetIndex 14 Text "Get off your high horse" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 8 Text "I understand" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 9 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-	}
-	// 8
-	Node_SpeechSequence 
-	{
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "It's not for everyone. It's a dirty job." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "So what does that say about you?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children
-		{
-			{  TargetIndex 15 Text "" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex 9 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-	}
-	// 9
-	Node_SpeechSequence 
-	{
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		SpeechSequence
-		{
-			{  Speaker "Cagney" Text "I'm only in it for the money." SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-			{  Speaker "Bandar" Text "Of course you are. Didn't anyone ever tell you there's more to life?" SpeakerState "None" EdgeText "Next" VoiceSoundWave "" VoiceDialogueWave "" }
-		}
-		InnerEdges
-		{
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-			{  TargetIndex -1 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True }
-		}
-		Children { {  TargetIndex 16 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 10
-	Node_Speech 
-	{
-		Text "Look, I don't really give a fuck who you are. And as long as you don't piss off Mr. A over there, you don't gotta give a fuck about me either."
-		SpeakerState "None"
-		bIsVirtualParent True
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 11
-	Node_Speech 
-	{
-		Text ""
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-	}
-	// 12
-	Node_Speech 
-	{
-		Text ""
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-	}
-	// 13
-	Node_Speech 
-	{
-		Text ""
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-	}
-	// 14
-	Node_Speech 
-	{
-		Text "Rather do it for an actual junkyard instead?"
-		SpeakerState "None"
-		bIsVirtualParent False
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children { {  TargetIndex 17 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 15
-	Node_Speech 
-	{
-		Text "Nothing good."
-		SpeakerState "None"
-		bIsVirtualParent True
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 16
-	Node_Speech 
-	{
-		Text "Guess not."
-		SpeakerState "None"
-		bIsVirtualParent True
-		OwnerName "Cagney"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
-	}
-	// 17
-	Node_Speech 
-	{
-		Text "Laugh it up, skiptrace. At least this dog has a place to lay his head."
-		SpeakerState "None"
-		bIsVirtualParent True
-		OwnerName "Bandar"
-		bCheckChildrenOnEvaluation False
-		VoiceSoundWave ""
-		VoiceDialogueWave ""
-		Children { {  TargetIndex 6 Text "Next" SpeakerState "None" bIncludeInAllOptionListIfUnsatisfied True } }
+		EnterEvents { {  ParticipantName "Cagney" EventType "EDlgEventType::DlgEventEvent" EventName "SetCanOpen" IntValue 0 FloatValue 0.0 NameValue "None" bDelta False bValue False } }
 	}
 }
